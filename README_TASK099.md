@@ -55,29 +55,23 @@ any other schema, and a test asserts that no executed SQL ever mentions
 Prerequisites: the base repo's setup (Python 3.12, PostgreSQL/PostGIS 17).
 
 ```bash
-# 1. from the repo root, once:
-python install_task099.py            # --check shows what it would change
-git diff                             # review
-
-# 2. configure (no secrets are committed)
+# 1. configure (no secrets are committed)
 cp .env.example .env                 # then edit the values
 
-# 3. create the staging schema and tables
+# 2. create the staging schema and tables
 alembic upgrade head
 
-# 4. dry run (no database writes; writes the quality report)
+# 3. dry run (no database writes; writes the quality report)
 python -m app.runners.transformer_specs_runner --dry-run
 
-# 5. load into iris_staging (all enabled sources = pandapower types)
+# 4. load into iris_staging (all enabled sources = pandapower types)
 python -m app.runners.transformer_specs_runner
-#    or: python main.py transformer-specs   (if main.py exposes PipelineRunner)
 
-# 6. validate
+# 5. validate
 python scripts/verify_transformer_specs.py    # runs sql/validation_transformer_specs.sql
 ```
 
-Docker (installer adds an `etl` service under the `etl` profile; the
-default `docker compose up` is unchanged):
+Docker (the `etl` service is under the `etl` profile; the default `docker compose up` is unchanged):
 
 ```bash
 docker compose up -d postgres

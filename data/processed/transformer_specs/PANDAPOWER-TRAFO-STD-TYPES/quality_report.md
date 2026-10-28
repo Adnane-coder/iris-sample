@@ -8,7 +8,7 @@
 - Version: pandapower 3.5.6 (reproduces the CSV, SHA-256 verified)
 - Retrieved on: 2026-10-28
 - URL: https://github.com/e2nIEE/pandapower
-- License / access: Open-source library (BSD 3-Clause; confirm in the repository LICENSE file). Generic typical parameters of standard types, NOT manufacturer data and NOT an official FNN table. Source lists no thermal limits or cooling class.
+- License / access: Open-source library (BSD 3-Clause, verified in the pandapower 3.5.6 LICENSE file). Generic typical parameters of standard types, NOT manufacturer data and NOT an official FNN table. Source lists no thermal limits or cooling class.
 - Input file: `pandapower_trafo_std_types_raw.csv`
 - Format adapter: pandapower_trafo_std_types
 - SHA-256: `3afc189ae9e97cc0e90b35302a6eddb16f22debc105feb58c802fa7c4d67f766`
