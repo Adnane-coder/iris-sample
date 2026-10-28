@@ -1,0 +1,96 @@
+{
+  "acceptance_evidence": {
+    "illustrative_values_present": false,
+    "rows_reconciled": true,
+    "statement": "rows_read == accepted + rejected"
+  },
+  "assumptions": [
+    "Each benchmark row is a generic characteristic for a voltage class and rating; it is not tied to a specific installed unit or site, so no geometry is stored (country_code / spatial_scope only).",
+    "Units are normalized to kV, MVA, % (uk), K and degC. Missing units are assumed to be kV / MVA and flagged (UNIT_ASSUMED_*).",
+    "Only two-winding voltage classes (HV/LV) are supported.",
+    "Plausibility bounds are implementer-chosen sanity limits, not normative values.",
+    "Identity is (source, HV, LV, MVA, cooling, vector group); rows with the same identity but different values are rejected as conflicts."
+  ],
+  "coverage": {
+    "accepted": 14,
+    "blank_rows_skipped": 0,
+    "columns_kept_in_raw_record_only": [
+      "std_type",
+      "i0_percent",
+      "pfe_kw",
+      "vkr_percent",
+      "sn_mva",
+      "vn_lv_kv",
+      "vn_hv_kv",
+      "vk_percent",
+      "shift_degree",
+      "tap_side",
+      "tap_neutral",
+      "tap_min",
+      "tap_max",
+      "tap_step_degree",
+      "tap_step_percent",
+      "tap_changer_type",
+      "trafo_characteristic_table"
+    ],
+    "duplicate_conflicts": 0,
+    "duplicates_exact": 0,
+    "impedance_uk_percent_range": [
+      4.0,
+      18.0
+    ],
+    "nominal_mva_range": [
+      0.25,
+      160.0
+    ],
+    "rejected": 0,
+    "rejects_by_code": {},
+    "rows_read": 14,
+    "thermal_fields_populated": {
+      "hotspot_limit_c": 0,
+      "top_oil_rise_limit_k": 0,
+      "winding_avg_rise_limit_k": 0
+    },
+    "voltage_classes": {
+      "10/0.4 kV": 3,
+      "110/10 kV": 3,
+      "110/20 kV": 3,
+      "20/0.4 kV": 3,
+      "220/110 kV": 1,
+      "380/110 kV": 1
+    },
+    "warnings_by_code": {}
+  },
+  "generated_at_utc": "2026-10-28T19:12:41+00:00",
+  "known_gaps": [
+    "No machine-readable official FNN table was available to ingest automatically; published tables must be transcribed or exported to CSV and registered in the source registry.",
+    "No automatic update check: the sources are static documents. Re-check the publisher for new revisions before relying on values.",
+    "Three-winding units, tap-changer ranges and short-circuit withstand data are out of scope.",
+    "Decimal ambiguity: '1.234' is read as 1.234, not 1234."
+  ],
+  "load": {
+    "dry_run": false,
+    "inserted": 0,
+    "rejects_stored": 0,
+    "unchanged": 14,
+    "updated": 0
+  },
+  "rejects": [],
+  "source": {
+    "adapter": "pandapower_trafo_std_types",
+    "delimiter": ",",
+    "document_version": "pandapower version not recorded (CSV exported separately)",
+    "encoding": "utf-8",
+    "input_file": "pandapower_trafo_std_types_raw.csv",
+    "is_illustrative": false,
+    "kind": "technical_reference",
+    "license_note": "Open-source library (BSD 3-Clause; confirm in the repository LICENSE file). Generic typical parameters of standard types, NOT manufacturer data and NOT an official FNN table. Source lists no thermal limits or cooling class.",
+    "publisher": "pandapower project (e2nIEE: Fraunhofer IEE and University of Kassel)",
+    "retrieved_on": "2026-10-28",
+    "sha256": "3afc189ae9e97cc0e90b35302a6eddb16f22debc105feb58c802fa7c4d67f766",
+    "sha256_verified_against_registry": true,
+    "source_id": "PANDAPOWER-TRAFO-STD-TYPES",
+    "title": "pandapower standard two-winding transformer types (library export, 14 types)",
+    "url": "https://github.com/e2nIEE/pandapower"
+  }
+}

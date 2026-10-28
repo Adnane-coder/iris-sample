@@ -1,0 +1,15 @@
+std_type,i0_percent,pfe_kw,vkr_percent,sn_mva,vn_lv_kv,vn_hv_kv,vk_percent,shift_degree,vector_group,tap_side,tap_neutral,tap_min,tap_max,tap_step_degree,tap_step_percent,tap_changer_type,trafo_characteristic_table
+160 MVA 380/110 kV,0.06,60.0,0.25,160.0,110.0,380.0,12.2,0,Yy0,hv,0,-9,9,0,1.5,Ratio,False
+100 MVA 220/110 kV,0.06,55.0,0.26,100.0,110.0,220.0,12.0,0,Yy0,hv,0,-9,9,0,1.5,Ratio,False
+63 MVA 110/20 kV,0.04,22.0,0.32,63.0,20.0,110.0,18.0,150,YNd5,hv,0,-9,9,0,1.5,Ratio,False
+40 MVA 110/20 kV,0.05,18.0,0.34,40.0,20.0,110.0,16.2,150,YNd5,hv,0,-9,9,0,1.5,Ratio,False
+25 MVA 110/20 kV,0.07,14.0,0.41,25.0,20.0,110.0,12.0,150,YNd5,hv,0,-9,9,0,1.5,Ratio,False
+63 MVA 110/10 kV,0.04,22.0,0.32,63.0,10.0,110.0,18.0,150,YNd5,hv,0,-9,9,0,1.5,Ratio,False
+40 MVA 110/10 kV,0.05,18.0,0.34,40.0,10.0,110.0,16.2,150,YNd5,hv,0,-9,9,0,1.5,Ratio,False
+25 MVA 110/10 kV,0.07,14.0,0.41,25.0,10.0,110.0,12.0,150,YNd5,hv,0,-9,9,0,1.5,Ratio,False
+0.25 MVA 20/0.4 kV,0.32,0.8,1.44,0.25,0.4,20.0,6.0,150,Yzn5,hv,0,-2,2,0,2.5,Ratio,False
+0.4 MVA 20/0.4 kV,0.3375,1.35,1.425,0.4,0.4,20.0,6.0,150,Dyn5,hv,0,-2,2,0,2.5,Ratio,False
+0.63 MVA 20/0.4 kV,0.2619,1.65,1.206,0.63,0.4,20.0,6.0,150,Dyn5,hv,0,-2,2,0,2.5,Ratio,False
+0.25 MVA 10/0.4 kV,0.24,0.6,1.2,0.25,0.4,10.0,4.0,150,Dyn5,hv,0,-2,2,0,2.5,Ratio,False
+0.4 MVA 10/0.4 kV,0.2375,0.95,1.325,0.4,0.4,10.0,4.0,150,Dyn5,hv,0,-2,2,0,2.5,Ratio,False
+0.63 MVA 10/0.4 kV,0.1873,1.18,1.0794,0.63,0.4,10.0,4.0,150,Dyn5,hv,0,-2,2,0,2.5,Ratio,False

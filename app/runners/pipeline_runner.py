@@ -123,6 +123,9 @@ from app.runners.land_value_runner import (
 from app.runners.power_infrastructure_runner import (
     run as run_power_infrastructure,
 )
+from app.runners.transformer_specs_runner import (
+    run as run_transformer_specs,
+)
 
 from app.runners.osm_infrastructure_runner import (
     run as run_osm_infrastructure,
@@ -234,9 +237,8 @@ class PipelineRunner:
                 self.land_values
             ),
 
-            "power-infrastructure": (
-                self.power_infrastructure
-            ),
+            "power-infrastructure": self.power_infrastructure,
+            "transformer-specs": self.transformer_specs,
 
             "osm-infrastructure": (
                 self.osm_infrastructure
@@ -815,6 +817,10 @@ class PipelineRunner:
         else:
 
             run_power_infrastructure()
+
+    def transformer_specs(self):
+        print("Loading Transformer Specs (staging)...")
+        run_transformer_specs()
 
     # ======================================================
     # OSM INFRASTRUCTURE

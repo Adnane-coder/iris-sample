@@ -1,0 +1,12 @@
+{
+  "registry_path": "data/reference/fnn/sources.json",
+  "output_dir": "data/processed/transformer_specs",
+  "bounds": {
+    "voltage_kv": [0.4, 1200.0],
+    "nominal_mva": [0.1, 2000.0],
+    "impedance_uk_percent": [0.5, 30.0],
+    "top_oil_rise_k": [1.0, 100.0],
+    "winding_avg_rise_k": [1.0, 100.0],
+    "hotspot_c": [50.0, 200.0]
+  }
+}

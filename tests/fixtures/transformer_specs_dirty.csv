@@ -1,0 +1,15 @@
+voltage_class,nominal_power,impedance_uk,cooling,vector_group,top_oil_rise_limit_k,winding_avg_rise_limit_k,hotspot_limit_c,source_reference,notes
+110/20 kV,40 MVA,12 %,ONAN/ONAF,YNyn0(d),60,65,98,t-01,valid baseline row
+110000/20000 V,40000 kVA,"12,5 %",onan/onaf,YNyn0(d),60 K,65 K,98 °C,t-02,unit conversion V and kVA plus decimal comma - same identity as row 1 but uk differs
+110/20 kV,40 MVA,12 %,ONAN/ONAF,YNyn0(d),60,65,98,t-03,exact duplicate of row 1
+,63 MVA,14 %,ONAN,YNyn0(d),60,65,98,t-04,missing voltage class
+110/20 kV,63 MW,14 %,ONAN,YNyn0(d),60,65,98,t-05,wrong unit MW
+110/20 kV,abc MVA,14 %,ONAN,YNyn0(d),60,65,98,t-06,malformed power
+20/110 kV,63 MVA,14 %,ONAN,YNyn0(d),60,65,98,t-07,HV lower than LV
+110/20 kV,63 MVA,0.14 %,ONAN,YNyn0(d),60,65,98,t-08,ratio mistaken for percent
+110/20 kV,63 MVA,14 %,ONAN,YNyn0(d),60,65,400,t-09,hotspot out of range
+380/110/30 kV,300 MVA,12 %,ONAN,YNa0d5,60,65,98,t-10,three-winding not supported
+110/10 kV,31.5 MVA,11.5 %,ONAN,YNyn0(d),60,65,98,t-11,extra,field
+110/10 kV,40,12 %,ONAN/ONAF,YNyn0(d),-,-,-,t-12,power without unit: assumed MVA and flagged; thermal fields empty
+
+380/110 kV,200 MVA,12 %,ONAN/ONAF,YNa0d5,60,65,98,t-13,valid after blank line

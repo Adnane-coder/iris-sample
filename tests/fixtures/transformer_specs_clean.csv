@@ -1,0 +1,4 @@
+voltage_class,nominal_power,impedance_uk,cooling,vector_group,top_oil_rise_limit_k,winding_avg_rise_limit_k,hotspot_limit_c,source_reference,notes
+110/20 kV,40 MVA,12 %,ONAN/ONAF,YNyn0(d),60,65,98,t-01,fixture
+110/20 kV,63 MVA,14 %,ONAN/ONAF,YNyn0(d),60,65,98,t-02,fixture
+380/110 kV,300 MVA,12.5 %,ONAN/ONAF,YNa0d5,60,65,98,t-03,fixture
