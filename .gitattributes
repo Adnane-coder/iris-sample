@@ -1,0 +1,2 @@
+data/reference/fnn/*.csv -text
+tests/fixtures/*.csv -text
