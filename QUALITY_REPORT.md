@@ -5,8 +5,7 @@
 - **Default source: `PANDAPOWER-TRAFO-STD-TYPES`** - 14 standard two-winding
   transformer types from the pandapower open-source library. A documented
   technical reference with generic typical parameters; **not an official
-  FNN table and not manufacturer data.** Licence stated in the registry as
-  BSD 3-Clause (to be confirmed against the repository LICENSE).
+  FNN table and not manufacturer data.** Licence: BSD 3-Clause, verified in the LICENSE file of pandapower 3.5.6.
 - **No thermal limits and no cooling class in this source**: those columns
   are NULL, not invented.
 - No invented demo values are shipped. The `illustrative` source kind
@@ -18,7 +17,7 @@
 | Check | Result |
 |---|---|
 | Automated tests (`pytest`, SQLite) | 66 passed (re-run after removing the demo source) |
-| Migration `upgrade` / `downgrade` on PostgreSQL 16 | OK; ORM columns equal migrated columns; `downgrade` removes the `iris_staging` schema |
+| Migration `upgrade` / `downgrade` (PostgreSQL 16, earlier dev run; `upgrade` also applied on the final PostgreSQL 17 database, Alembic at head) | OK; ORM columns equal migrated columns; `downgrade` removes the `iris_staging` schema |
 | Default load on PostgreSQL (pandapower source) | 14 read, 14 accepted, 0 rejected, `is_illustrative = false`, kind `technical_reference` |
 | Rerun of the same input | inserted 0, updated 0, unchanged 14 (idempotent) |
 | Pre-load check of the 14 rows | each `std_type` name agrees with its `sn_mva`, `vn_hv_kv`, `vn_lv_kv`; HV > LV; `vkr_percent` < `vk_percent`; no duplicate type |
