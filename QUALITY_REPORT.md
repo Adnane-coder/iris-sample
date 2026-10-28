@@ -78,11 +78,7 @@ run (no writes, no session needed).
 - Not an official FNN table; if a lawful FNN/IEC table is obtained it can
   be registered without code changes (README section 6).
 - Thermal limits and cooling classes are absent from the default source.
-- pandapower version and retrieval date of the export are not recorded.
 - Rows other than the two POMATO-cited ones are not independently
   cross-checked against a second source.
 - No automatic source-update detection (static files).
-- Docker image and compose service not executed in the dev environment;
-  the full Alembic chain with the base repo's earlier migrations was not
-  executed there (`install_task099.py` chains the new migration to the
-  detected head).
+- Docker: the `etl` service was run end to end against an existing database (`unchanged=14`). A cold start from an empty Postgres volume (full Alembic chain from the base migrations) was not tested; the base migration `dda1cbd31839` now creates the `app` schema to allow it.
