@@ -39,8 +39,8 @@
 
 - dry_run: False
 - inserted: 0
-- updated: 14
-- unchanged: 0
+- updated: 0
+- unchanged: 14
 - rejects_stored: 0
 
 ## Acceptance evidence
