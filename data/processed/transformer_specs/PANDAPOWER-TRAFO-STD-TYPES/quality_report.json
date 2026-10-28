@@ -61,7 +61,7 @@
     },
     "warnings_by_code": {}
   },
-  "generated_at_utc": "2026-10-28T19:12:41+00:00",
+  "generated_at_utc": "2026-10-28T19:25:04+00:00",
   "known_gaps": [
     "No machine-readable official FNN table was available to ingest automatically; published tables must be transcribed or exported to CSV and registered in the source registry.",
     "No automatic update check: the sources are static documents. Re-check the publisher for new revisions before relying on values.",
