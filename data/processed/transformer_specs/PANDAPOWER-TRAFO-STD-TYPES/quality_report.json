@@ -61,7 +61,7 @@
     },
     "warnings_by_code": {}
   },
-  "generated_at_utc": "2026-10-28T19:25:04+00:00",
+  "generated_at_utc": "2026-10-28T19:26:50+00:00",
   "known_gaps": [
     "No machine-readable official FNN table was available to ingest automatically; published tables must be transcribed or exported to CSV and registered in the source registry.",
     "No automatic update check: the sources are static documents. Re-check the publisher for new revisions before relying on values.",
@@ -72,14 +72,14 @@
     "dry_run": false,
     "inserted": 0,
     "rejects_stored": 0,
-    "unchanged": 14,
-    "updated": 0
+    "unchanged": 0,
+    "updated": 14
   },
   "rejects": [],
   "source": {
     "adapter": "pandapower_trafo_std_types",
     "delimiter": ",",
-    "document_version": "pandapower version not recorded (CSV exported separately)",
+    "document_version": "pandapower 3.5.6 (reproduces the CSV, SHA-256 verified)",
     "encoding": "utf-8",
     "input_file": "pandapower_trafo_std_types_raw.csv",
     "is_illustrative": false,

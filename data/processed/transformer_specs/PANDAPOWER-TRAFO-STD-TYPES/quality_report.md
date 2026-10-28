@@ -5,7 +5,7 @@
 - Title: pandapower standard two-winding transformer types (library export, 14 types)
 - Publisher: pandapower project (e2nIEE: Fraunhofer IEE and University of Kassel)
 - Kind: `technical_reference`
-- Version: pandapower version not recorded (CSV exported separately)
+- Version: pandapower 3.5.6 (reproduces the CSV, SHA-256 verified)
 - Retrieved on: 2026-10-28
 - URL: https://github.com/e2nIEE/pandapower
 - License / access: Open-source library (BSD 3-Clause; confirm in the repository LICENSE file). Generic typical parameters of standard types, NOT manufacturer data and NOT an official FNN table. Source lists no thermal limits or cooling class.
@@ -39,8 +39,8 @@
 
 - dry_run: False
 - inserted: 0
-- updated: 0
-- unchanged: 14
+- updated: 14
+- unchanged: 0
 - rejects_stored: 0
 
 ## Acceptance evidence

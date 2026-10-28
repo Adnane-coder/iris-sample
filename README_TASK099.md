@@ -185,3 +185,9 @@ ORDER BY voltage_hv_kv DESC, voltage_lv_kv DESC;
 - The base repo's `docker-compose.yml` contains a hard-coded pgAdmin
   password; it was left untouched, and nothing added here uses a literal
   secret.
+
+## Provenance of the CSV and base migration
+
+- `data/reference/fnn/pandapower_trafo_std_types_raw.csv` was exported with `scripts/check_std_types.py` (`pandapower.available_std_types(net, "trafo")`). The script needs pandapower, which is not a dependency of the ETL and is not installed in the project `.venv`. It writes to `data/raw/transformer_specs/`; copy the result to `data/reference/fnn/` and check its SHA-256 against `sources.json`.
+- Export reproduced with pandapower 3.5.6 (identical SHA-256).
+- The base migration `dda1cbd31839` now runs `CREATE SCHEMA IF NOT EXISTS app` so `alembic upgrade head` works on an empty database. A cold start from an empty volume was not tested.
